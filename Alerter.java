@@ -1,0 +1,10 @@
+public class Alerter implements EventHandler{
+    @Override
+    public void handle(Event event){
+        if(event.getPriority() > 3){
+            System.out.println("[ALERT] CRITICAL: " + event.getName());
+        }else{
+            System.out.println("[ALERT] MINOR ALERT: " + event.getName());
+        }
+    }
+}
